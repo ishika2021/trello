@@ -1,0 +1,67 @@
+// colors
+$black-1: #1D2125;
+$black-2: #101204;
+$black-3: #22272B;
+$grey-1: #323940;
+$white-1: #B6C2CF;
+$primary-background: #8F3F66;
+$blue-1: #579dff;
+$blue-2: #85b8ff;
+
+
+// border
+$border-radius-1: 12px;
+$border-radius-2: 8px;
+$border-radius-3: 4px;
+
+
+@mixin font-heading {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    font-family: "Inter", serif;
+    background-color: $primary-background;
+    color: $white-1;
+    overflow-y: hidden;
+    overflow-x: auto;
+    // overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    
+    &::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
+    }
+    
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+
+.MuiSvgIcon-root{
+    font-size: 16px !important;
+    cursor: pointer;
+    padding: 3px;
+    
+    &:hover{
+        background-color: $black-1;
+        border-radius: 2px;
+    }
+}

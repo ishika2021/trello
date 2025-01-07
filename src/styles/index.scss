@@ -1,0 +1,19 @@
+@import "./config.scss";
+
+//components
+@import "../components/Header/styles.scss";
+@import "../components/Footer/styles.scss";
+@import "../components/List/styles.scss";
+@import "../components/Modal/styles.scss";
+@import "../components/Button/styles.scss";
+@import "../components/Input/styles.scss";
+@import "../components/AddInput/styles.scss";
+@import "../components/CardList/styles.scss";
+@import "../components/Card/styles.scss";
+
+// layout
+@import "../layout/styles.scss";
+
+
+// views
+@import "../views/Board/styles.scss";

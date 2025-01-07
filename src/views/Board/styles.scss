@@ -1,0 +1,16 @@
+.main-wrapper{
+    border: 1px solid red;
+    // overflow-x: auto;
+    // scroll-behavior: smooth;
+    // width: 100vw;
+}
+.board-wrapper{
+    flex:1;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    // overflow-x: auto;
+    // scroll-behavior: smooth;
+    width: 100%;
+   
+}

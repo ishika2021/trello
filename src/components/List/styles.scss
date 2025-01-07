@@ -1,0 +1,35 @@
+.list-wrapper{
+    width: 260px;
+    min-width: 260px;
+    // min-width: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: $black-2;
+    border-radius: $border-radius-2;
+    height: fit-content;
+    
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        h6{
+            @include font-heading;
+            margin: 0;
+            
+        }
+          
+        .MuiSvgIcon-root {
+            font-size: 18px;
+        }
+        
+        
+        
+    }
+    
+   
+}
+
+

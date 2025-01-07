@@ -1,0 +1,40 @@
+.add-input-wrapper{
+    
+    height: fit-content;
+    border-radius: $border-radius-2;
+    padding: 4px 8px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 12px;
+    
+    .MuiSvgIcon-root {
+        font-size: 16px;
+    }
+    
+   
+}
+
+.add-input-wrapper.primary {
+    background: transparent;
+    color: $white-1;
+    
+    
+    &:hover{
+        background-color: $black-3;
+        cursor: pointer;
+    }
+}
+
+.add-input-wrapper.secondary{
+    min-width: 200px;
+    width: 200px;
+    background-color: #ffffff3d;
+    cursor: pointer;
+    color: #ffffff;
+    
+    &:hover{
+        background-color: #ffffff33;
+    }
+}
+

@@ -1,0 +1,30 @@
+.btn{
+    padding:  5px 10px;
+    background-color: transparent;
+    border: 1px solid $white-1;
+    color: $white-1;
+    font-size: 14px;
+    border-radius: $border-radius-3;
+    cursor: pointer;
+    width: fit-content;
+    
+    &.secondary{
+        background-color: $blue-1;
+        color: $black-1;
+        border: none;
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 12px;
+        
+        &:hover{
+            background-color: $blue-2;
+        }
+    }
+}
+
+// .btn:hover{
+//     translate: transform 0.3s ease-in-out;
+//     transform: scale(1.1);
+//     // background-color: $white-1;
+//     // color: $grey-1;
+// }
