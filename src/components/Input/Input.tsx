@@ -36,7 +36,6 @@ const Input = ({ placeholder, type, listID }: InputProps) => {
     >
       <textarea
         rows={2}
-        type="text"
         placeholder={placeholder}
         value={value}
         onChange={handleInput}

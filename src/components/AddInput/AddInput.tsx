@@ -1,6 +1,5 @@
 import { Input } from "../../components";
 import AddIcon from "@mui/icons-material/Add";
-import { useEffect, useState } from "react";
 import useStore from "../../store";
 
 type AddInputProps = {

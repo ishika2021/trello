@@ -5,22 +5,12 @@ import { DragDropContext, Droppable } from "@hello-pangea/dnd";
 
 const Board = () => {
   const [allLists, setAllLists] = useState([]);
-  const { lists, updateList, closeModal, modal } = useStore();
+  const { lists, updateList } = useStore();
 
   useEffect(() => {
     setAllLists(lists);
   }, [lists]);
-
-  // const handleBoardClick = () => {
-  //   if(modal.isOpen){
-
-  //     closeModal()
-  //   }
-  // }
-
-  const handleDragEnd = (result) => {
-    console.log("DRAG_END!!!!!!!!!", result);
-
+  const handleDragEnd = (result: any) => {
     const { destination, source, draggableId, type } = result;
 
     if (!destination) {
