@@ -19,5 +19,9 @@
         border-radius: $border-radius-3;
 
     }
+    .loading{
+        @include center;
+        width: 100%;
+    }
 
 }

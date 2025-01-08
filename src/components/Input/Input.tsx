@@ -39,6 +39,7 @@ const Input = ({ placeholder, type, listID }: InputProps) => {
         placeholder={placeholder}
         value={value}
         onChange={handleInput}
+        autoFocus
       />
       <Button
         label={type === "card" ? "Add Card" : "Add List"}

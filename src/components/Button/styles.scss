@@ -22,7 +22,7 @@
     }
 
     &.danger {
-        background-color: #ca4848;
+        background-color: $red-1;
         color: $black-1;
         border: none;
         font-family: inherit;
@@ -30,7 +30,7 @@
         font-size: 12px;
 
         &:hover {
-            background-color: #e07272;
+            background-color: $red-2;
         }
     }
 }

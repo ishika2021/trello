@@ -22,12 +22,12 @@
             outline: none;
             background: transparent;
             border: none;
-            color: #ffffff;
+            color: $white-2;
             font-size: 20px;
             padding: 5px 10px;
             
             &:focus-visible{
-                border: 1px solid white;
+                border: 1px solid $white-2;
             }
         }
         .title{

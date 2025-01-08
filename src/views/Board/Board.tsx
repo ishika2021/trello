@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { List, AddInput } from "../../components";
 import useStore from "../../store";
 import { DragDropContext, Droppable } from "@hello-pangea/dnd";
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 const Board = () => {
   const [allLists, setAllLists] = useState([]);
@@ -94,16 +96,23 @@ const Board = () => {
             ref={provided.innerRef}
             {...provided.droppableProps}
           >
-            {allLists &&
-              allLists.map((list, idx) => (
-                <List list={list} key={list.id} index={idx} />
-              ))}
-            <AddInput
-              placeholder="Add New List"
-              style="secondary"
-              type="list"
-              listID="new-list"
-            />
+            {allLists && allLists.length > 0 ? (
+              <>
+                {allLists.map((list, idx) => (
+                  <List list={list} key={list.id} index={idx} />
+                ))}
+                <AddInput
+                  placeholder="Add New List"
+                  style="secondary"
+                  type="list"
+                  listID="new-list"
+                />
+              </>
+            ) : (
+               <div className="loading">
+               <CircularProgress/>
+               </div>
+            )}
             {provided.placeholder}
           </div>
         )}
