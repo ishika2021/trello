@@ -5,11 +5,18 @@ import { DragDropContext, Droppable } from "@hello-pangea/dnd";
 
 const Board = () => {
   const [allLists, setAllLists] = useState([]);
-  const { lists , updateList } = useStore();
+  const { lists, updateList, closeModal, modal } = useStore();
 
   useEffect(() => {
     setAllLists(lists);
   }, [lists]);
+
+  // const handleBoardClick = () => {
+  //   if(modal.isOpen){
+
+  //     closeModal()
+  //   }
+  // }
 
   const handleDragEnd = (result) => {
     console.log("DRAG_END!!!!!!!!!", result);
@@ -26,22 +33,24 @@ const Board = () => {
     ) {
       return;
     }
-    
-    if(type === "list"){
-        const draggableList = allLists.find(({id})=>id === draggableId)
-        if(draggableList){
-          allLists.splice(source.index,1);
-        allLists.splice(destination.index,0,draggableList)
+
+    if (type === "list") {
+      const draggableList = allLists.find(({ id }) => id === draggableId);
+      if (draggableList) {
+        allLists.splice(source.index, 1);
+        allLists.splice(destination.index, 0, draggableList);
         updateList(allLists);
-        }
-        
-        return;
+      }
+
+      return;
     }
 
     if (source.droppableId === destination.droppableId) {
-      const updatedList = allLists.map((list:List) => {
+      const updatedList = allLists.map((list: List) => {
         if (list.id === source.droppableId) {
-          const draggableCard = list.cards.find(({ id }) => id === draggableId) as Card;
+          const draggableCard = list.cards.find(
+            ({ id }) => id === draggableId
+          ) as Card;
           const newCardList = list.cards;
           newCardList.splice(source.index, 1);
           newCardList.splice(destination.index, 0, draggableCard);
@@ -54,10 +63,12 @@ const Board = () => {
       });
       updateList(updatedList);
     } else {
-      let draggableCard : Card ;
-      const updatedSourceList = allLists.map((list:List) => {
+      let draggableCard: Card;
+      const updatedSourceList = allLists.map((list: List) => {
         if (list.id === source.droppableId) {
-          draggableCard = list.cards.find(({ id }) => id === draggableId) as Card;
+          draggableCard = list.cards.find(
+            ({ id }) => id === draggableId
+          ) as Card;
           const updatedCardList = list.cards;
           updatedCardList.splice(source.index, 1);
           return {
@@ -88,13 +99,22 @@ const Board = () => {
     <DragDropContext onDragEnd={handleDragEnd}>
       <Droppable droppableId="board" direction="horizontal" type="list">
         {(provided) => (
-          <div className="board-wrapper" ref={provided.innerRef} {...provided.droppableProps} >
+          <div
+            className="board-wrapper"
+            ref={provided.innerRef}
+            {...provided.droppableProps}
+          >
             {allLists &&
-            
-              allLists.map((list,idx) => <List list={list} key={list.id} index={idx}/>)}
-              <AddInput placeholder="Add New List" style="secondary" type="list" listID="new-list"/>
-              {provided.placeholder}
-              
+              allLists.map((list, idx) => (
+                <List list={list} key={list.id} index={idx} />
+              ))}
+            <AddInput
+              placeholder="Add New List"
+              style="secondary"
+              type="list"
+              listID="new-list"
+            />
+            {provided.placeholder}
           </div>
         )}
       </Droppable>

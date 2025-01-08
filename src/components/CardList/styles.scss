@@ -1,7 +1,6 @@
-.all-card-wrapper{
+.all-card-wrapper {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    // border: 1px solid red;
-    min-height: 1px;
+    min-height: 1px; //to drag a card in an empty list
 }

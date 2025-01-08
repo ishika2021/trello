@@ -1,18 +1,17 @@
-import {Button} from "../../components";
+import { Button } from "../../components";
+import useStore from "../../store";
 
 const Header = () => {
-  
-    const handleReset = () => {
-      console.log("handle-reset!")
-    }
-    return(
-        <div className="header-wrapper">
-           <h1 className="logo">
-              Trello
-           </h1>
-           <Button label="Reset" action={handleReset} />
-        </div>
-    )
-}
+  const { resetList } = useStore();
+  const handleReset = () => {
+    resetList();
+  };
+  return (
+    <div className="header-wrapper">
+      <h1 className="logo">Trello</h1>
+      <Button label="Reset" action={handleReset} />
+    </div>
+  );
+};
 
 export default Header;

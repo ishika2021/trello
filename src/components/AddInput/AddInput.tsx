@@ -16,12 +16,9 @@ const AddInputProps = ({
   type,
   listID,
 }: AddInputProps) => {
-  // const [showInput, setShowInput] = useState(false);
   const { newInput, addNewInput } = useStore();
 
   const handleAddInput = () => {
-    console.log(listID);
-    
     addNewInput(listID, type);
   };
   const getPlaceholder = () => {

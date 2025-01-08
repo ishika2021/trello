@@ -1,15 +1,13 @@
-.header-wrapper{
+.header-wrapper {
     display: flex;
     padding: 10px 20px;
     justify-content: space-between;
     align-items: center;
     background-color: $black-1;
-    
-    h1{
-       margin: 0;
-       font-size: 18px;
-       line-height: 26px;
-       
+
+    h1 {
+        margin: 0;
+        font-size: 18px;
+        line-height: 26px;
     }
-    
 }

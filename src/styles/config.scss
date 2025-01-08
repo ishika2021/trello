@@ -1,10 +1,12 @@
 // colors
+$primary-background: #8F3F66;
 $black-1: #1D2125;
 $black-2: #101204;
 $black-3: #22272B;
 $grey-1: #323940;
+$grey-2: #a1bdd914;
+$grey-3: #a6c5e229;
 $white-1: #B6C2CF;
-$primary-background: #8F3F66;
 $blue-1: #579dff;
 $blue-2: #85b8ff;
 
@@ -39,12 +41,11 @@ body{
     color: $white-1;
     overflow-y: hidden;
     overflow-x: auto;
-    // overflow: hidden;
     height: 100vh;
     width: 100vw;
     
     &::-webkit-scrollbar { 
-        display: none;  /* Safari and Chrome */
+        display: none; 
     }
     
 }

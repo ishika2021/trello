@@ -1,4 +1,4 @@
-.card-wrapper{
+.card-wrapper {
     background-color: $black-3;
     border: 1px solid $black-3;
     border-radius: $border-radius-2;
@@ -8,8 +8,8 @@
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    
-    &:hover{
+
+    &:hover {
         border: 1px solid $white-1;
     }
 }

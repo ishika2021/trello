@@ -1,7 +1,6 @@
-.list-wrapper{
+.list-wrapper {
     width: 260px;
     min-width: 260px;
-    // min-width: 200px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -9,27 +8,28 @@
     background-color: $black-2;
     border-radius: $border-radius-2;
     height: fit-content;
-    
-    .header{
+
+    .header {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
-        h6{
+
+        input {
             @include font-heading;
-            margin: 0;
-            
+            background: transparent;
+            color: $white-1;
+            border: none;
+            outline: none;
+            border-radius: $border-radius-3;
+
+            &:focus-visible {
+                box-shadow: 0 0 0 1px $blue-1;
+            }
         }
-          
+
         .MuiSvgIcon-root {
             font-size: 18px;
         }
-        
-        
-        
+
     }
-    
-   
 }
-
-
